@@ -133,7 +133,7 @@ class LogstashFormatterV1(LogstashFormatter):
 
         base_log = {'@timestamp': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
                     '@version': 1,
-                    'source_host': self.source_host
+                    'source_host': self.source_host,
                     'message': msg}
         base_log.update(fields)
 
